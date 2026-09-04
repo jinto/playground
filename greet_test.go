@@ -26,3 +26,9 @@ func TestGreetInZeroLangFallsBackToEnglish(t *testing.T) {
 		t.Fatalf("GreetIn zero = %q", got)
 	}
 }
+
+func TestWhisper(t *testing.T) {
+	if got := Whisper("Bob"); got != "hello, bob!" {
+		t.Fatalf("Whisper = %q", got)
+	}
+}

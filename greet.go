@@ -1,6 +1,9 @@
 package playground
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // Lang identifies the language of a greeting.
 type Lang string
@@ -28,4 +31,9 @@ func GreetIn(name string, lang Lang) string {
 // Greet returns an English greeting for name.
 func Greet(name string) string {
 	return GreetIn(name, LangEN)
+}
+
+// Whisper returns the greeting for name in all lowercase.
+func Whisper(name string) string {
+	return strings.ToLower(Greet(name))
 }
